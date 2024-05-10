@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {CommonModule} from "@angular/common";
 
 @Component({
@@ -8,6 +8,12 @@ import {CommonModule} from "@angular/common";
   templateUrl: './basket.component.html',
   styleUrl: './basket.component.css'
 })
-export class BasketComponent {
+export class BasketComponent implements OnInit {
+  @Input() basketItems: any[] = [];
 
+  constructor() {
+  }
+
+  ngOnInit() {
+  }
 }

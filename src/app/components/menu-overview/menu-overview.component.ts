@@ -1,11 +1,14 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {RestaurantService} from "../../services";
 import {CommonModule} from "@angular/common";
+import {MatDrawer, MatSidenavModule} from "@angular/material/sidenav";
+import {BasketComponent} from "../basket/basket.component";
+import {MatIcon} from "@angular/material/icon";
 
 @Component({
   selector: 'app-menu-overview',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BasketComponent, MatSidenavModule, MatIcon,],
   templateUrl: './menu-overview.component.html',
   styleUrl: './menu-overview.component.css'
 })
@@ -14,15 +17,22 @@ export class MenuOverviewComponent implements OnInit {
   selectedTag: string = '';
   filteredDishes: any[] = [];
   basketItems: any[] = [];
+  sidenavIsOpen = false;
 
+  @ViewChild('drawer') drawer!: MatDrawer;
+  @Output() basketItemsChanged: EventEmitter<any[]> = new EventEmitter<any[]>();
 
-  constructor(private restaurantService: RestaurantService) {
+  // quantityMenu: any;
+
+  constructor(
+    private restaurantService: RestaurantService) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.basketItems = this.restaurantService.basketItems;
     this.getMenu();
   }
+
 
   getMenu(): void {
     this.restaurantService.getDishes().subscribe(dishes => {
@@ -30,6 +40,7 @@ export class MenuOverviewComponent implements OnInit {
       this.filteredDishes = this.dishes;
     });
   }
+
 
   filterByTag(tag: string) {
     this.selectedTag = tag;
@@ -42,22 +53,36 @@ export class MenuOverviewComponent implements OnInit {
   }
 
   addToBasket(dish: any): void {
-
+    this.restaurantService.addToBasket(dish);
+    this.toggleSideNav();
   }
 
   isAddedToBasket(dish: any): boolean {
-    return false
+    return this.restaurantService.isAddedToBasket(dish)
   }
 
   getQuantityInBasket(dish: any): number {
-    return 0;
+    return this.restaurantService.getQuantityInBasket(dish);
   }
 
   decreaseQuantity(dish: any): void {
-
+    this.restaurantService.decreaseQuantity(dish);
   }
 
   increaseQuantity(dish: any): void {
-
+    this.restaurantService.increaseQuantity(dish);
   }
+
+  toggleSideNav() {
+    if (this.sidenavIsOpen) {
+      this.drawer.close().then(() => {
+        this.sidenavIsOpen = false;
+      });
+    } else {
+      this.drawer.open().then(() => {
+        this.sidenavIsOpen = true;
+      });
+    }
+  }
+
 }

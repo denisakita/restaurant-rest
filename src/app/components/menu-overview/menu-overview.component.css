@@ -243,3 +243,108 @@ span {
   margin: auto 0;
   font: 600 18px Poppins, sans-serif;
 }
+
+/*  Side Nav  */
+
+.container {
+  box-shadow: 0 100px 80px 0 rgba(135, 135, 135, 0.07),
+  0 41.778px 33.422px 0 rgba(135, 135, 135, 0.05),
+  0 22.336px 17.869px 0 rgba(135, 135, 135, 0.04),
+  0 12.522px 10.017px 0 rgba(135, 135, 135, 0.04),
+  0 6.65px 5.32px 0 rgba(135, 135, 135, 0.03),
+  0 2.767px 2.214px 0 rgba(135, 135, 135, 0.02);
+  background-color: #fff;
+  display: flex;
+  max-width: 480px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-content {
+  flex: 1;
+}
+
+.basket-container {
+  width: 480px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+/*.mat-drawer-inner-container {*/
+/*  width: 100%;*/
+/*  overflow: auto;*/
+/*}*/
+
+
+.mat-drawer {
+  height: 100%;
+}
+
+.toggle-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  margin-right: 32px;
+  margin-bottom: 8px;
+
+}
+
+.toggle-button button {
+  background-color: #f64e0c;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #12131a;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+
+  stroke-width: 1px;
+  filter: drop-shadow(0px 4.529px 3.623px rgba(157, 157, 157, 0.02)) drop-shadow(0px 12.522px 10.017px rgba(157, 157, 157, 0.04)) drop-shadow(0px 30.147px 24.118px rgba(157, 157, 157, 0.05)) drop-shadow(0px 100px 80px rgba(157, 157, 157, 0.07));
+  align-items: start;
+  white-space: nowrap;
+  width: 90px;
+  height: 90px;
+}
+
+
+
+/*.toggle-button button img {*/
+/*  width: 24px;*/
+/*  margin-top: 20px;*/
+/*  object-position: center;*/
+/*  position: absolute;*/
+/*  bottom: 0;*/
+/*}*/
+
+
+
+
+.length {
+  font-family: Poppins, sans-serif;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  border-color: rgba(255, 255, 255, 0.15);
+  border-style: solid;
+  border-width: 1px;
+  background-color: #fff;
+  width: 24px;
+  height: 24px;
+  padding: 0 4px;
+  margin-top: -50px;
+  margin-left: 32px;
+}
