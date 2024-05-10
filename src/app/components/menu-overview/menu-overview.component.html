@@ -1,1 +1,64 @@
-<p>menu-overview works!</p>
+<div class="menu-container">
+  <div class="menu-content">
+    <div class="menu-overview-card">
+
+      <div class="tag">
+        <div class="tag-list">
+          <div class="tag-popular clickable-tag"
+               [class.selected-popular]="selectedTag == 'Burgers' || selectedTag === 'Steaks'"
+               (click)="filterByTag('Popular')">Popular
+          </div>
+          <div class="tag-burgers clickable-tag" [class.selected]="selectedTag === 'Burgers'"
+               (click)="filterByTag('Burgers')">Burgers
+          </div>
+          <div class="tag-steaks clickable-tag" [class.selected]="selectedTag === 'Steaks'"
+               (click)="filterByTag('Steaks')">Steaks
+          </div>
+        </div>
+
+        <div class="div-search">
+          <img src="assets/images/menu/search.png" class="img-search" alt=""/>
+          <div class="search">Search</div>
+        </div>
+      </div>
+
+      <div class="dishes-card">
+        <div class="filteredDishes-card" *ngFor="let dish of filteredDishes">
+          <div class="filteredDish-card">
+            <div class="column-image">
+              <img [src]="dish.image" class="dish-img" alt=""/>
+            </div>
+            <div class="column-data">
+              <div class="data-card">
+                <div class="name-card">
+                  <div class="dish-name">{{ dish.name }}</div>
+                  <img src="assets/images/menu/img-info.png" class="info-img" alt=""/>
+                </div>
+                <div class="dish-description">{{ dish.description }}</div>
+                <div class="dish-actions">
+                  <button *ngIf="!isAddedToBasket(dish)" class="add-button" (click)="addToBasket(dish)">Add to Cart
+                  </button>
+                  <div *ngIf="isAddedToBasket(dish)" class="div-quantity">
+                    <div class="minus" (click)="decreaseQuantity(dish)">
+                      <img src="assets/images/basket/minus.svg" class="quantity-img" alt=""/>
+                    </div>
+                    <span>{{ getQuantityInBasket(dish) }}</span>
+                    <div class="plus" (click)="increaseQuantity(dish)">
+                      <img src="assets/images/basket/plus.svg" class="quantity-img" alt=""/>
+                    </div>
+                  </div>
+                  <div class="dish-price">€ {{ dish.price }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+</div>
