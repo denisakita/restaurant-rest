@@ -7,6 +7,7 @@ import {Observable} from "rxjs";
 })
 export class RestaurantService {
   private apiUrl = 'http://localhost:3000';
+  basketItems: any[] = [];
 
   constructor(private http: HttpClient) {
   }
