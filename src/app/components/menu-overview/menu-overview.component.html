@@ -54,8 +54,8 @@
           </div>
         </div>
       </div>
-
     </div>
+
     <div class="toggle-button">
       <img src="assets/images/menu/basket.svg"
            class="basket-img"
@@ -67,19 +67,19 @@
 
     <div class="basket-container" [style.display]="sidenavIsOpen ? 'block' : 'none'">
 
-
       <mat-drawer-container class="container">
         <mat-drawer #drawer mode="side" position="start" [opened]="sidenavIsOpen">
           <app-basket *ngIf="sidenavIsOpen"
                       [basketItems]="basketItems"
                       [sidenavIsOpen]="sidenavIsOpen"
-                      (closeSidenav)="sidenavIsOpen = false"
-          ></app-basket>
+                      (closeSidenav)="sidenavIsOpen = false">
+
+          </app-basket>
         </mat-drawer>
         <mat-drawer-content>
-          <!-- Your main content goes here -->
         </mat-drawer-content>
       </mat-drawer-container>
     </div>
 
   </div>
+</div>

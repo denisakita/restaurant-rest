@@ -18,6 +18,7 @@ export class MenuOverviewComponent implements OnInit {
   filteredDishes: any[] = [];
   basketItems: any[] = [];
   sidenavIsOpen = false;
+
   @ViewChild('drawer') drawer!: MatDrawer;
   @Output() basketItemsChanged: EventEmitter<any[]> = new EventEmitter<any[]>();
 

@@ -34,7 +34,8 @@
     <div class="total-value">€ {{ (this.calculatedTotal.total + deliveryFee) | number:'1.2-2' }}</div>
   </div>
 
-  <div class="order-card">
+
+  <div class="order-card" (click)="toggleCheckout()">
     <span style="font-weight: 600; color: rgba(255, 255, 255, 1)">
           Order (
         </span>
@@ -45,4 +46,9 @@
   </div>
   <div class="continue-card">Continue shopping</div>
 
+
+</div>
+
+<div [style.display]="sidenavIsOpen ? 'block' : 'none'">
+  <app-checkout *ngIf="showCheckout" (closeSidenav)="sidenavIsOpen = false"></app-checkout>
 </div>

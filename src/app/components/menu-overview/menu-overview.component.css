@@ -77,7 +77,7 @@
 }
 
 
-/**/
+/* Menu Dishes CSS*/
 
 
 .dishes-card {
@@ -251,7 +251,7 @@ span {
   font: 600 18px Poppins, sans-serif;
 }
 
-/*  Side Nav  */
+/*  Side Nav CSS */
 
 .container {
   box-shadow: 0 100px 80px 0 rgba(135, 135, 135, 0.07),
@@ -288,8 +288,6 @@ span {
   height: 100%;
 }
 
-
-
 .mat-drawer {
   height: 100%;
 }
@@ -314,7 +312,6 @@ span {
   font-weight: 700;
   cursor: pointer;
   outline: none;
-
   stroke-width: 1px;
   filter: drop-shadow(0px 4.529px 3.623px rgba(157, 157, 157, 0.02)) drop-shadow(0px 12.522px 10.017px rgba(157, 157, 157, 0.04)) drop-shadow(0px 30.147px 24.118px rgba(157, 157, 157, 0.05)) drop-shadow(0px 100px 80px rgba(157, 157, 157, 0.07));
   align-items: start;
