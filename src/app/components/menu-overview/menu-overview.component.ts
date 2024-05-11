@@ -4,11 +4,12 @@ import {CommonModule} from "@angular/common";
 import {MatDrawer, MatSidenavModule} from "@angular/material/sidenav";
 import {BasketComponent} from "../basket/basket.component";
 import {MatIcon} from "@angular/material/icon";
+import {FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-menu-overview',
   standalone: true,
-  imports: [CommonModule, BasketComponent, MatSidenavModule, MatIcon,],
+  imports: [CommonModule, BasketComponent, MatSidenavModule, MatIcon, ReactiveFormsModule,],
   templateUrl: './menu-overview.component.html',
   styleUrl: './menu-overview.component.css'
 })
@@ -18,18 +19,34 @@ export class MenuOverviewComponent implements OnInit {
   filteredDishes: any[] = [];
   basketItems: any[] = [];
   sidenavIsOpen = false;
+  searchForm: FormGroup = new FormGroup<any>({})
 
   @ViewChild('drawer') drawer!: MatDrawer;
   @Output() basketItemsChanged: EventEmitter<any[]> = new EventEmitter<any[]>();
 
   constructor(
     private restaurantService: RestaurantService,
+    private fb: FormBuilder
   ) {
   }
 
   ngOnInit(): void {
     this.basketItems = this.restaurantService.basketItems;
     this.getMenu();
+    this.getSearchForm();
+
+  }
+
+  getSearchForm() {
+    this.searchForm = this.fb.group({
+      search: ['']
+    });
+  }
+
+
+  searchMenuItem(): void {
+    const searchTerm = this.searchForm.get('search')?.value.trim().toLowerCase();
+    this.filteredDishes = this.dishes.filter(dish => dish.name.toLowerCase().includes(searchTerm));
   }
 
 
@@ -82,4 +99,5 @@ export class MenuOverviewComponent implements OnInit {
       });
     }
   }
+
 }

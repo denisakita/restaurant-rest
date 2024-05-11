@@ -33,7 +33,6 @@ export class CheckoutComponent implements OnInit {
 
   submitForm() {
     if (this.checkoutForm.valid) {
-      console.log('Form submitted successfully!');
       this.showSnackBar('Order placed successfully!');
     } else {
       this.checkoutForm.markAllAsTouched();

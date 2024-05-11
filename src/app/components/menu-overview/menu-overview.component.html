@@ -16,10 +16,12 @@
           </div>
         </div>
 
-        <div class="div-search">
-          <img src="assets/images/menu/search.png" class="img-search" alt=""/>
-          <input type="text" class="search" placeholder="Search"/>
-        </div>
+        <form [formGroup]="searchForm">
+          <div class="div-search">
+            <img src="assets/images/menu/search.png" class="img-search" alt=""/>
+            <input type="text" class="search" placeholder="Search" formControlName="search" (input)="searchMenuItem()"/>
+          </div>
+        </form>
       </div>
 
       <div class="dishes-card">
@@ -66,7 +68,6 @@
     </div>
 
     <div class="basket-container" [style.display]="sidenavIsOpen ? 'block' : 'none'">
-
       <mat-drawer-container class="container">
         <mat-drawer #drawer mode="side" position="start" [opened]="sidenavIsOpen">
           <app-basket *ngIf="sidenavIsOpen"
