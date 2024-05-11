@@ -17,8 +17,8 @@
         </div>
 
         <div class="div-search">
-          <img src="assets/search.png" class="img-search" alt=""/>
-          <div class="search">Search</div>
+          <img src="assets/images/menu/search.png" class="img-search" alt=""/>
+          <input type="text" class="search" placeholder="Search"/>
         </div>
       </div>
 
@@ -56,26 +56,30 @@
       </div>
 
     </div>
-
     <div class="toggle-button">
-      <!--      <img src="assets/basket.svg" class="basket" alt=""/>-->
-      <!--      <span class="length">1</span>-->
-      <button (click)="toggleSideNav()">Toggle</button>
+      <img src="assets/images/menu/basket.svg"
+           class="basket-img"
+           [ngClass]="basketItems.length > 0 ? 'basket-img' : 'basket-img-fixed'"
+           alt=""/>
+      <span class="length" *ngIf="basketItems.length > 0">{{ basketItems.length }}</span>
+      <button (click)="toggleSideNav()"></button>
+    </div>
+
+    <div class="basket-container" [style.display]="sidenavIsOpen ? 'block' : 'none'">
+
+
+      <mat-drawer-container class="container">
+        <mat-drawer #drawer mode="side" position="start" [opened]="sidenavIsOpen">
+          <app-basket *ngIf="sidenavIsOpen"
+                      [basketItems]="basketItems"
+                      [sidenavIsOpen]="sidenavIsOpen"
+                      (closeSidenav)="sidenavIsOpen = false"
+          ></app-basket>
+        </mat-drawer>
+        <mat-drawer-content>
+          <!-- Your main content goes here -->
+        </mat-drawer-content>
+      </mat-drawer-container>
     </div>
 
   </div>
-
-  <div class="basket-container" [style.display]="sidenavIsOpen ? 'block' : 'none'">
-
-    <mat-drawer-container class="container">
-      <mat-drawer #drawer mode="side" position="start" [opened]="sidenavIsOpen">
-                <app-basket *ngIf="sidenavIsOpen" [basketItems]="basketItems"></app-basket>
-      </mat-drawer>
-      <mat-drawer-content>
-
-      </mat-drawer-content>
-    </mat-drawer-container>
-  </div>
-
-
-</div>

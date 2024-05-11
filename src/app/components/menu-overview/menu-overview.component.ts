@@ -18,14 +18,12 @@ export class MenuOverviewComponent implements OnInit {
   filteredDishes: any[] = [];
   basketItems: any[] = [];
   sidenavIsOpen = false;
-
   @ViewChild('drawer') drawer!: MatDrawer;
   @Output() basketItemsChanged: EventEmitter<any[]> = new EventEmitter<any[]>();
 
-  // quantityMenu: any;
-
   constructor(
-    private restaurantService: RestaurantService) {
+    private restaurantService: RestaurantService,
+  ) {
   }
 
   ngOnInit(): void {
@@ -67,6 +65,9 @@ export class MenuOverviewComponent implements OnInit {
 
   decreaseQuantity(dish: any): void {
     this.restaurantService.decreaseQuantity(dish);
+    if (this.basketItems.length === 0) {
+      this.sidenavIsOpen = false;
+    }
   }
 
   increaseQuantity(dish: any): void {
@@ -74,15 +75,10 @@ export class MenuOverviewComponent implements OnInit {
   }
 
   toggleSideNav() {
-    if (this.sidenavIsOpen) {
-      this.drawer.close().then(() => {
-        this.sidenavIsOpen = false;
-      });
-    } else {
+    if (!this.sidenavIsOpen) {
       this.drawer.open().then(() => {
         this.sidenavIsOpen = true;
       });
     }
   }
-
 }
