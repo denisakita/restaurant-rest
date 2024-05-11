@@ -1,1 +1,48 @@
-<p>basket works!</p>
+<div class="basket">
+  <div class="basket-card">
+    <div class="order-heading">Your order</div>
+    <div class="close-basket" (click)="closeBasket()">
+      <img src="assets/images/basket/cancel.svg" class="close-img" alt=""/>
+    </div>
+  </div>
+  <div class="items" *ngFor="let item of dishesItems; let i = index">
+    <div class="item-name">{{ item.name }}</div>
+    <div class="item-price">Price per item: € {{ item.price }}</div>
+    <div class="total-item-card">
+      <div class="total-item">Total: € {{ item.price * item.quantity }}</div>
+      <div class="quantity-card">
+        <div class="div-minus" (click)="decreaseQuantity(item)">
+          <img src="assets/images/basket/minus.svg" class="img-quantity" alt=""/>
+        </div>
+        <span>{{ item.quantity }} </span>
+        <div class="div-plus" (click)="increaseQuantity(item)">
+          <img src="assets/images/basket/plus.svg" class="img-quantity" alt=""/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="calculation-card">
+    <div class="subtotal">Subtotal</div>
+    <div class="subtotal-value">{{ this.calculatedTotal.total }}</div>
+  </div>
+  <div class="delivery-card">
+    <div class="delivery-fee">Delivery fee</div>
+    <div class="delivery-value">€ {{ deliveryFee | number:'1.2-2' }}</div>
+  </div>
+  <div class="total-card">
+    <div class="total">Total</div>
+    <div class="total-value">€ {{ (this.calculatedTotal.total + deliveryFee) | number:'1.2-2' }}</div>
+  </div>
+
+  <div class="order-card">
+    <span style="font-weight: 600; color: rgba(255, 255, 255, 1)">
+          Order (
+        </span>
+    <span style="font-weight: 600; color: rgba(255, 255, 255, 1)">€</span>
+    <span style="font-weight: 600; color: rgba(255, 255, 255, 1)">
+         {{ (this.calculatedTotal.total + deliveryFee) | number:'1.2-2' }})
+        </span>
+  </div>
+  <div class="continue-card">Continue shopping</div>
+
+</div>

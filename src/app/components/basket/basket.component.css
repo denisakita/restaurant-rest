@@ -1,0 +1,206 @@
+.basket {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 454px;
+  padding: 50px 20px 80px;
+}
+
+
+.basket-card {
+  justify-content: space-between;
+  display: flex;
+  gap: 20px;
+  font-size: 24px;
+  color: #12131a;
+  font-weight: 700;
+}
+
+.order-heading {
+  font-family: Poppins, sans-serif;
+}
+
+.close-basket {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 24px;
+  margin: auto 0;
+}
+
+
+.close-img {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 24px;
+  margin: auto 0;
+}
+
+.items {
+  border-radius: 12px;
+  border-color: rgba(235, 231, 231, 1);
+  border-style: solid;
+  border-width: 1px;
+  background-color: #f7f7f7;
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.item-name {
+  color: #12131a;
+  font: 600 16px Poppins, sans-serif;
+}
+
+.item-price {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: #12131a;
+  text-overflow: ellipsis;
+  margin-top: 7px;
+  font: 400 14px Poppins, sans-serif;
+}
+
+.total-item-card {
+  justify-content: space-between;
+  display: flex;
+  margin-top: 12px;
+  gap: 20px;
+}
+
+.total-item {
+  color: #f64e0c;
+  margin: auto 0;
+  font: 600 16px Poppins, sans-serif;
+}
+
+.quantity-card {
+  justify-content: end;
+  display: flex;
+  gap: 12px;
+  padding: 0 20px;
+}
+
+.div-minus {
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border-color: rgba(255, 255, 255, 0.15);
+  border-style: solid;
+  border-width: 1px;
+  background-color: #ebe7e7;
+  display: flex;
+  width: 32px;
+  height: 32px;
+
+}
+
+.img-quantity {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 16px;
+}
+
+
+span {
+  color: #12131a;
+  margin: auto 0;
+  font: 600 16px Poppins, sans-serif;
+}
+
+.div-plus {
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border-color: rgba(255, 255, 255, 0.15);
+  border-style: solid;
+  border-width: 1px;
+  background-color: #ebe7e7;
+  display: flex;
+  width: 32px;
+  height: 32px;
+}
+
+
+.calculation-card {
+  justify-content: space-between;
+  display: flex;
+  margin-top: 50px;
+  gap: 20px;
+  font-size: 16px;
+  color: #12131a;
+  font-weight: 500;
+}
+
+.subtotal {
+  font-family: Poppins, sans-serif;
+}
+
+.subtotal-value {
+  text-align: right;
+  font-family: Poppins, sans-serif;
+}
+
+.delivery-card {
+  justify-content: space-between;
+  display: flex;
+  margin-top: 4px;
+  gap: 20px;
+  font-size: 16px;
+  color: #12131a;
+  font-weight: 500;
+}
+
+.delivery-fee {
+  font-family: Poppins, sans-serif;
+}
+
+.delivery-value {
+  text-align: right;
+  font-family: Poppins, sans-serif;
+}
+
+.total-card {
+  justify-content: space-between;
+  display: flex;
+  margin-top: 4px;
+  gap: 20px;
+  font-size: 16px;
+  color: #12131a;
+  font-weight: 500;
+}
+
+.total {
+  font-family: Poppins, sans-serif;
+}
+
+.total-value {
+  text-align: right;
+  font-family: Poppins, sans-serif;
+}
+
+.order-card {
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #f64e0c;
+  margin-top: 20px;
+  color: #fff;
+  padding: 8px 12px;
+  font: 400 16px Poppins, sans-serif;
+}
+
+.continue-card {
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  margin-top: 10px;
+  color: #12131a;
+  padding: 8px 12px;
+  font: 600 16px Poppins, sans-serif;
+}
