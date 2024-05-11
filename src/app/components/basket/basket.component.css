@@ -191,6 +191,7 @@ span {
   color: #fff;
   padding: 8px 12px;
   font: 400 16px Poppins, sans-serif;
+  cursor: pointer;
 }
 
 .continue-card {
@@ -201,4 +202,5 @@ span {
   color: #12131a;
   padding: 8px 12px;
   font: 600 16px Poppins, sans-serif;
+  cursor: pointer;
 }

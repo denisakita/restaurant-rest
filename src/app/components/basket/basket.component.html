@@ -44,7 +44,7 @@
          {{ (this.calculatedTotal.total + deliveryFee) | number:'1.2-2' }})
         </span>
   </div>
-  <div class="continue-card">Continue shopping</div>
+  <div class="continue-card" (click)="closeBasket()">Continue shopping</div>
 
 
 </div>
