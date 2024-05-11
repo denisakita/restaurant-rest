@@ -59,8 +59,8 @@
     </div>
 
     <div class="toggle-button">
-      <img ngSrc="assets/images/menu/basket.svg" class="basket-img"
-           [ngClass]="basketItems.length > 0 ? 'basket-img' : 'basket-img-fixed'"alt="" height="24" width="24"/>
+      <img src="assets/images/menu/basket.svg" class="basket-img"
+           [ngClass]="basketItems.length > 0 ? 'basket-img' : 'basket-img-fixed'" alt="" height="24" width="24"/>
       <span class="length" *ngIf="basketItems.length > 0">{{ basketItems.length }}</span>
       <button (click)="toggleSideNav()"></button>
     </div>
