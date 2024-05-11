@@ -184,8 +184,7 @@ span {
 }
 
 .order-card {
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   border-radius: 8px;
   background-color: #f64e0c;
   margin-top: 20px;
@@ -195,8 +194,7 @@ span {
 }
 
 .continue-card {
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   border-radius: 8px;
   background-color: #f7f7f7;
   margin-top: 10px;

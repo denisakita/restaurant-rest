@@ -1,12 +1,14 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-checkout',
   standalone: true,
   imports: [
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgOptimizedImage
   ],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.css'

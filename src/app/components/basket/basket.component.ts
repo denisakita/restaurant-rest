@@ -1,12 +1,12 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
-import {CommonModule} from "@angular/common";
+import {CommonModule, NgOptimizedImage} from "@angular/common";
 import {RestaurantService} from "../../services";
 import {CheckoutComponent} from "../checkout/checkout.component";
 
 @Component({
   selector: 'app-basket',
   standalone: true,
-  imports: [CommonModule, CheckoutComponent],
+  imports: [CommonModule, CheckoutComponent, NgOptimizedImage],
   templateUrl: './basket.component.html',
   styleUrl: './basket.component.css'
 })

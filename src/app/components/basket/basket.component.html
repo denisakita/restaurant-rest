@@ -2,7 +2,7 @@
   <div class="basket-card">
     <div class="order-heading">Your order</div>
     <div class="close-basket" (click)="closeBasket()">
-      <img src="assets/images/basket/cancel.svg" class="close-img" alt=""/>
+      <img ngSrc="assets/images/basket/cancel.svg" class="close-img" alt="" height="24" width="24"/>
     </div>
   </div>
   <div class="items" *ngFor="let item of dishesItems; let i = index">
@@ -12,11 +12,11 @@
       <div class="total-item">Total: € {{ item.price * item.quantity }}</div>
       <div class="quantity-card">
         <div class="div-minus" (click)="decreaseQuantity(item)">
-          <img src="assets/images/basket/minus.svg" class="img-quantity" alt=""/>
+          <img ngSrc="assets/images/basket/minus.svg" class="img-quantity" alt="" height="16" width="16"/>
         </div>
         <span>{{ item.quantity }} </span>
         <div class="div-plus" (click)="increaseQuantity(item)">
-          <img src="assets/images/basket/plus.svg" class="img-quantity" alt=""/>
+          <img ngSrc="assets/images/basket/plus.svg" class="img-quantity" alt="" height="16" width="16"/>
         </div>
       </div>
     </div>
