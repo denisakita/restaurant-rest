@@ -1,0 +1,362 @@
+.tag {
+  display: flex;
+  margin-top: 21px;
+  width: 100%;
+  align-items: start;
+  gap: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  justify-content: space-between;
+}
+
+.tag-list {
+  display: flex;
+  gap: 12px;
+  color: #12131a;
+  font-weight: 500;
+}
+
+.clickable-tag {
+  font-family: Poppins, sans-serif;
+  justify-content: center;
+  border-radius: 21px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.tag-popular {
+  background-color: #12131a;
+  color: #fff;
+}
+
+.tag-burgers,
+.tag-steaks {
+  background-color: #ebe7e7;
+  color: #12131a;
+}
+
+.selected {
+  background-color: black;
+  color: white;
+}
+
+.selected-popular {
+  background-color: #ebe7e7;
+  color: black;
+}
+
+.div-search {
+  border-radius: 21px;
+  background-color: #f7f7f7;
+  display: flex;
+  margin-top: 5px;
+  gap: 10px;
+  color: #404b5a;
+  font-weight: 400;
+  padding: 4px 15px;
+}
+
+
+.img-search {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 16px;
+  margin: auto 0;
+}
+
+.search {
+  min-width: 175px;
+  border: none;
+  box-shadow: none;
+  background-color: #f7f7f7;
+  outline: none;
+  color: #404b5a;
+  max-width: 47px;
+  font: 400 14px Poppins, sans-serif;
+}
+
+
+/* Menu Dishes CSS*/
+
+
+.dishes-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+  column-gap: 20px;
+  margin-top: 20px;
+}
+
+.filteredDishes-card {
+  border-radius: 12px;
+  box-shadow: 0 12.522px 10.017px 0 rgba(157, 157, 157, 0.04),
+  0 4.529px 3.623px 0 rgba(157, 157, 157, 0.02);
+  border-color: rgba(235, 231, 231, 1);
+  border-style: solid;
+  border-width: 1px;
+  background-color: #fff;
+  flex-basis: calc(50% - 10px);
+  padding: 5px 20px 5px 5px;
+  box-sizing: border-box;
+}
+
+
+.filteredDish-card {
+  display: flex;
+}
+
+
+.column-image {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 30%;
+  margin-left: 0;
+}
+
+
+.dish-img {
+  aspect-ratio: 0.98;
+  object-fit: auto;
+  object-position: center;
+  width: 194px;
+  max-width: 100%;
+  flex-grow: 1;
+}
+
+
+.column-data {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 70%;
+  margin-left: 20px;
+}
+
+
+.data-card {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+
+.name-card {
+  justify-content: space-between;
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  color: #12131a;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+.dish-name {
+  font-family: Poppins, sans-serif;
+}
+
+.info-img {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 20px;
+  align-self: start;
+}
+
+.dish-description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: #12131a;
+  margin-top: 7px;
+  font: 400 14px Poppins, sans-serif;
+  text-overflow: ellipsis;
+}
+
+.dish-actions {
+  display: flex;
+  margin-top: 62px;
+  gap: 16px;
+}
+
+
+.add-button {
+  border-radius: 8px;
+  background-color: #12131a;
+  color: #fff;
+  justify-content: center;
+  padding: 8px 12px;
+  font: 400 14px Poppins, sans-serif;
+
+}
+
+.div-quantity {
+  border-radius: 8px;
+  justify-content: center;
+  font: 400 14px Poppins, sans-serif;
+  display: flex;
+  flex-direction: row;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.plus {
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border-color: rgba(255, 255, 255, 0.15);
+  border-style: solid;
+  border-width: 1px;
+  background-color: #ebe7e7;
+  display: flex;
+  width: 32px;
+  height: 32px;
+}
+
+span {
+  color: #12131a;
+  margin: auto 0;
+  font: 600 16px Poppins, sans-serif;
+}
+
+.minus {
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border-color: rgba(255, 255, 255, 0.15);
+  border-style: solid;
+  border-width: 1px;
+  background-color: #ebe7e7;
+  display: flex;
+  width: 32px;
+  height: 32px;
+}
+
+.quantity-img {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 16px;
+}
+
+.dish-price {
+  color: #12131a;
+  margin: auto 0;
+  font: 600 18px Poppins, sans-serif;
+}
+
+/*  Side Nav CSS */
+
+.container {
+  box-shadow: 0 100px 80px 0 rgba(135, 135, 135, 0.07),
+  0 41.778px 33.422px 0 rgba(135, 135, 135, 0.05),
+  0 22.336px 17.869px 0 rgba(135, 135, 135, 0.04),
+  0 12.522px 10.017px 0 rgba(135, 135, 135, 0.04),
+  0 6.65px 5.32px 0 rgba(135, 135, 135, 0.03),
+  0 2.767px 2.214px 0 rgba(135, 135, 135, 0.02);
+  background-color: #fff;
+  display: flex;
+  max-width: 480px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-content {
+  flex: 1;
+}
+
+.basket-container {
+  width: 480px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.mat-drawer {
+  height: 100%;
+}
+
+.toggle-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  margin-right: 32px;
+  margin-bottom: 8px;
+  cursor: pointer;
+
+}
+
+.toggle-button button {
+  background-color: #f64e0c;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #12131a;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  stroke-width: 1px;
+  filter: drop-shadow(0px 4.529px 3.623px rgba(157, 157, 157, 0.02)) drop-shadow(0px 12.522px 10.017px rgba(157, 157, 157, 0.04)) drop-shadow(0px 30.147px 24.118px rgba(157, 157, 157, 0.05)) drop-shadow(0px 100px 80px rgba(157, 157, 157, 0.07));
+  align-items: start;
+  white-space: nowrap;
+  width: 90px;
+  height: 90px;
+}
+
+
+.basket-img {
+  position: fixed;
+  right: 0;
+  margin-right: 78px;
+  z-index: 1;
+  margin-top: 43px;
+}
+
+
+.length {
+  font-family: Poppins, sans-serif;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  border-color: rgba(255, 255, 255, 0.15);
+  border-style: solid;
+  border-width: 1px;
+  background-color: #fff;
+  width: 10px;
+  height: 18px;
+  padding: 2px 6px;
+  position: fixed;
+  color: black;
+  z-index: 1;
+  right: 0;
+  margin-right: 52px;
+  margin-top: 18px;
+
+}
+
+.basket-img-fixed {
+  position: fixed;
+  right: 0;
+  margin-right: 62px;
+  z-index: 1;
+  margin-top: 30px;
+  width: 32px;
+}

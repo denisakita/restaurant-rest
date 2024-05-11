@@ -1,0 +1,84 @@
+<div class="menu-container">
+  <div class="menu-content">
+    <div class="menu-overview-card">
+
+      <div class="tag">
+        <div class="tag-list">
+          <div class="tag-popular clickable-tag"
+               [class.selected-popular]="selectedTag == 'Burgers' || selectedTag === 'Steaks'"
+               (click)="filterByTag('Popular')">Popular
+          </div>
+          <div class="tag-burgers clickable-tag" [class.selected]="selectedTag === 'Burgers'"
+               (click)="filterByTag('Burgers')">Burgers
+          </div>
+          <div class="tag-steaks clickable-tag" [class.selected]="selectedTag === 'Steaks'"
+               (click)="filterByTag('Steaks')">Steaks
+          </div>
+        </div>
+
+        <form [formGroup]="searchForm">
+          <div class="div-search">
+            <img ngSrc="assets/images/menu/search.png" class="img-search" alt="" height="17" width="16"/>
+            <input type="text" class="search" placeholder="Search" formControlName="search" (input)="searchMenuItem()"/>
+          </div>
+        </form>
+      </div>
+
+      <div class="dishes-card">
+        <div class="filteredDishes-card" *ngFor="let dish of filteredDishes">
+          <div class="filteredDish-card">
+            <div class="column-image">
+              <img [src]="dish.image" class="dish-img" alt=""/>
+            </div>
+            <div class="column-data">
+              <div class="data-card">
+                <div class="name-card">
+                  <div class="dish-name">{{ dish.name }}</div>
+                  <img ngSrc="assets/images/menu/img-info.png" class="info-img" alt="" height="20" width="20"/>
+                </div>
+                <div class="dish-description">{{ dish.description }}</div>
+                <div class="dish-actions">
+                  <button *ngIf="!isAddedToBasket(dish)" class="add-button" (click)="addToBasket(dish)">Add to Cart
+                  </button>
+                  <div *ngIf="isAddedToBasket(dish)" class="div-quantity">
+                    <div class="minus" (click)="decreaseQuantity(dish)">
+                      <img ngSrc="assets/images/basket/minus.svg" class="quantity-img" alt="" height="16" width="16"/>
+                    </div>
+                    <span>{{ getQuantityInBasket(dish) }}</span>
+                    <div class="plus" (click)="increaseQuantity(dish)">
+                      <img ngSrc="assets/images/basket/plus.svg" class="quantity-img" alt="" height="16" width="16"/>
+                    </div>
+                  </div>
+                  <div class="dish-price">€ {{ dish.price }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toggle-button">
+      <img ngSrc="assets/images/menu/basket.svg" class="basket-img"
+           [ngClass]="basketItems.length > 0 ? 'basket-img' : 'basket-img-fixed'"alt="" height="24" width="24"/>
+      <span class="length" *ngIf="basketItems.length > 0">{{ basketItems.length }}</span>
+      <button (click)="toggleSideNav()"></button>
+    </div>
+
+    <div class="basket-container" [style.display]="sidenavIsOpen ? 'block' : 'none'">
+      <mat-drawer-container class="container">
+        <mat-drawer #drawer mode="side" position="start" [opened]="sidenavIsOpen">
+          <app-basket *ngIf="sidenavIsOpen"
+                      [basketItems]="basketItems"
+                      [sidenavIsOpen]="sidenavIsOpen"
+                      (closeSidenav)="sidenavIsOpen = false">
+
+          </app-basket>
+        </mat-drawer>
+        <mat-drawer-content>
+        </mat-drawer-content>
+      </mat-drawer-container>
+    </div>
+
+  </div>
+</div>

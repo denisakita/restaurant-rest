@@ -1,0 +1,48 @@
+<div class="checkout-card">
+  <div class="checkout-form">
+    <div class="payment">Payment</div>
+    <div class="close-basket" (click)="closeBasket()">
+      <img ngSrc="assets/images/basket/cancel.svg" class="close-img" alt="" height="24" width="24"/>
+    </div>
+  </div>
+  <div class="contact-info">Contact information</div>
+  <form [formGroup]="checkoutForm" (ngSubmit)="submitForm()">
+    <div class="name">Name
+      <span style="color: rgba(246, 78, 12, 1)">*</span>
+    </div>
+    <div class="full-name">Enter your full name</div>
+
+    <div class="phone">Contact phone number<span style="color: rgba(246, 78, 12, 1)">*</span></div>
+    <div class="prefix">+44<span style="color: rgba(147, 153, 161, 1)">XXX XX XX</span></div>
+
+    <div class="email">Email<span style="color: rgba(246, 78, 12, 1)">*</span></div>
+    <div class="email-info">mail.com</div>
+
+    <div class="delivery-to">Delivery to</div>
+    <div class="address">
+      Address
+      <span style="color: rgba(246, 78, 12, 1)">*</span>
+    </div>
+    <div class="address-info">Enter address to deliver here</div>
+
+    <div class="city">City<span style="color: rgba(246, 78, 12, 1)">*</span>
+    </div>
+    <div class="city-info">Enter city</div>
+
+    <div class="confirm">
+      <img ngSrc="assets/images/basket/checked-img.svg" class="img-2" alt="" height="17" width="16"/>
+      <div class="confirm-order">You can do not call me to confirm the order</div>
+    </div>
+
+    <div class="order-checkout" (click)="submitForm()">
+        <span style="font-weight: 600; color: rgba(255, 255, 255, 1)">
+          Order (
+        </span>
+      <span style="font-weight: 600; color: rgba(255, 255, 255, 1)">€</span>
+      <span style="font-weight: 600; color: rgba(255, 255, 255, 1)">
+          41.00)
+        </span>
+    </div>
+    <div class="continue-shopping" (click)="closeBasket()">Continue shopping</div>
+  </form>
+</div>
