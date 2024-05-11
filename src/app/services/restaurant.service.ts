@@ -59,9 +59,19 @@ export class RestaurantService {
     } else {
       const newItem = {...dish, quantity: 1};
       this.basketItems.push(newItem);
+      this.postToBasket();
     }
+    // this.postToBasket();
     this.getCalculatedTotal();
+  }
 
+  /**
+   * Updates the server-side basket with the current basketItems array.
+   * Sends a POST request to the server endpoint to update the basket.
+   * The request body contains the dishes array representing the items in the basket.
+   */
+  postToBasket(): void {
+    this.http.post<any[]>(`${this.apiUrl}/basket`, {dishes: this.basketItems}).subscribe();
   }
 
   /**

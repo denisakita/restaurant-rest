@@ -1,7 +1,7 @@
 {
   "dishes": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Classic Cheeseburger",
       "description": "Juicy beef patty topped with melted cheese, lettuce, tomato, and pickles, served with fries.",
       "image": "assets/images/dish-1.png",
@@ -10,7 +10,7 @@
       "popular": true
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "BBQ Bacon Burger",
       "description": "Beef patty smothered in tangy barbecue sauce, topped with crispy bacon, cheddar cheese, and onion rings.",
       "image": "assets/images/dish-2.png",
@@ -19,7 +19,7 @@
       "popular": false
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Portobello Mushroom Burger",
       "description": "Grilled portobello mushroom served on a bun with lettuce, tomato, red onion, and garlic aioli.",
       "image": "assets/images/dish-3.png",
@@ -28,7 +28,7 @@
       "popular": true
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Ribeye Steak",
       "description": "Juicy and flavorful ribeye steak cooked to perfection, served with mashed potatoes and seasonal vegetables.",
       "image": "assets/images/dish-4.png",
@@ -37,7 +37,7 @@
       "popular": true
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Filet Mignon",
       "description": "Tender filet mignon grilled to your preference, served with asparagus and hollandaise sauce.",
       "image": "assets/images/dish-5.png",
@@ -46,7 +46,7 @@
       "popular": false
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Black and Blue Steak Salad",
       "description": "Sliced blackened steak served over mixed greens with blue cheese crumbles, tomatoes, and balsamic vinaigrette.",
       "image": "assets/images/dish-6.png",
@@ -55,7 +55,7 @@
       "popular": true
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Veggie Burger",
       "description": "Plant-based burger patty made with black beans, mushrooms, and spices, served with avocado and sprouts.",
       "image": "assets/images/dish-1.png",
@@ -64,7 +64,7 @@
       "popular": true
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "New York Strip Steak",
       "description": "Flavorful New York strip steak grilled to perfection, served with garlic mashed potatoes and sautéed spinach.",
       "image": "assets/images/dish-2.png",
@@ -73,7 +73,7 @@
       "popular": true
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Western Bacon Burger",
       "description": "Beef patty topped with crispy onion rings, barbecue sauce, cheddar cheese, and bacon, served on a toasted bun.",
       "image": "assets/images/dish-3.png",
@@ -82,7 +82,7 @@
       "popular": false
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Grilled Chicken Steak",
       "description": "Tender grilled chicken breast seasoned with herbs and spices, served with roasted potatoes and green beans.",
       "image": "assets/images/dish-4.png",
@@ -91,7 +91,7 @@
       "popular": true
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Bison Burger",
       "description": "Lean and flavorful bison patty topped with caramelized onions, Swiss cheese, and arugula.",
       "image": "assets/images/dish-5.png",
@@ -100,7 +100,7 @@
       "popular": true
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Sirloin Steak",
       "description": "Juicy sirloin steak seasoned with garlic and herbs, served with mashed potatoes and steamed broccoli.",
       "image": "assets/images/dish-6.png",
@@ -109,5 +109,6 @@
       "popular": true
     }
   ],
-  "basket": []
+  "basket": [
+  ]
 }
