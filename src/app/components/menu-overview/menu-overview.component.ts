@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {RestaurantService} from "../../services";
-import {CommonModule} from "@angular/common";
+import {CommonModule, NgOptimizedImage} from "@angular/common";
 import {MatDrawer, MatSidenavModule} from "@angular/material/sidenav";
 import {BasketComponent} from "../basket/basket.component";
 import {MatIcon} from "@angular/material/icon";
@@ -9,7 +9,7 @@ import {FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
 @Component({
   selector: 'app-menu-overview',
   standalone: true,
-  imports: [CommonModule, BasketComponent, MatSidenavModule, MatIcon, ReactiveFormsModule,],
+  imports: [CommonModule, BasketComponent, MatSidenavModule, MatIcon, ReactiveFormsModule, NgOptimizedImage,],
   templateUrl: './menu-overview.component.html',
   styleUrl: './menu-overview.component.css'
 })

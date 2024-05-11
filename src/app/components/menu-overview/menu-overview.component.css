@@ -299,6 +299,7 @@ span {
   border-radius: 50%;
   margin-right: 32px;
   margin-bottom: 8px;
+  cursor: pointer;
 
 }
 
@@ -321,16 +322,13 @@ span {
 }
 
 
-
-
-.basket-img{
+.basket-img {
   position: fixed;
   right: 0;
   margin-right: 78px;
   z-index: 1;
   margin-top: 43px;
 }
-
 
 
 .length {
