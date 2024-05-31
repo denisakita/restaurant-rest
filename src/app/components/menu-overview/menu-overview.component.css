@@ -56,7 +56,6 @@
   padding: 4px 15px;
 }
 
-
 .img-search {
   aspect-ratio: 1;
   object-fit: auto;
@@ -76,9 +75,7 @@
   font: 400 14px Poppins, sans-serif;
 }
 
-
 /* Menu Dishes CSS*/
-
 
 .dishes-card {
   display: flex;
@@ -102,11 +99,9 @@
   box-sizing: border-box;
 }
 
-
 .filteredDish-card {
   display: flex;
 }
-
 
 .column-image {
   display: flex;
@@ -115,7 +110,6 @@
   width: 30%;
   margin-left: 0;
 }
-
 
 .dish-img {
   aspect-ratio: 0.98;
@@ -126,7 +120,6 @@
   flex-grow: 1;
 }
 
-
 .column-data {
   display: flex;
   flex-direction: column;
@@ -135,7 +128,6 @@
   margin-left: 20px;
 }
 
-
 .data-card {
   justify-content: space-between;
   display: flex;
@@ -143,7 +135,6 @@
   align-self: stretch;
   margin: auto 0;
 }
-
 
 .name-card {
   justify-content: space-between;
@@ -154,7 +145,6 @@
   font-weight: 600;
   white-space: nowrap;
 }
-
 
 .dish-name {
   font-family: Poppins, sans-serif;
@@ -184,7 +174,6 @@
   margin-top: 62px;
   gap: 16px;
 }
-
 
 .add-button {
   border-radius: 8px;
@@ -288,10 +277,6 @@ span {
   height: 100%;
 }
 
-.mat-drawer {
-  height: 100%;
-}
-
 .toggle-button {
   position: fixed;
   bottom: 0;
@@ -300,7 +285,6 @@ span {
   margin-right: 32px;
   margin-bottom: 8px;
   cursor: pointer;
-
 }
 
 .toggle-button button {
@@ -321,7 +305,6 @@ span {
   height: 90px;
 }
 
-
 .basket-img {
   position: fixed;
   right: 0;
@@ -329,7 +312,6 @@ span {
   z-index: 1;
   margin-top: 43px;
 }
-
 
 .length {
   font-family: Poppins, sans-serif;
@@ -349,14 +331,5 @@ span {
   right: 0;
   margin-right: 52px;
   margin-top: 18px;
-
 }
 
-.basket-img-fixed {
-  position: fixed;
-  right: 0;
-  margin-right: 62px;
-  z-index: 1;
-  margin-top: 30px;
-  width: 32px;
-}
