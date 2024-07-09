@@ -74,5 +74,13 @@ The `restaurant` service contains the logic for interacting with the REST API to
 - While not fully implemented in this assignment, the `restaurant` service lays the groundwork for future checkout functionality.
 - It includes the creation of a form to collect and submit order details, visually preparing for a smooth user experience during the checkout process.
 
+![Rest List](src/assets/images/data/rest-list.png)
+
+![Orders](src/assets/images/data/order.png)
+
+![Orders](src/assets/images/data/order-two.png)
+
+![Payment](src/assets/images/data/payment.png)
+
 ---
 
